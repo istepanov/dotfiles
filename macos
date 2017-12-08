@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+echo 'Configuring macOS...'
+
+# Disable nonsensical natural scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Expand save panel by default.
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Use a dark menu bar / dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string 'Dark'
+
+# Show the Develop menu in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+
+# Don't show Siri in the menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Enable scroll gesture (with modifier) to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+
+# Don't create dreaded .DS_Store files.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Don't want Photos.app to open up as soon as you plug something in?
+defaults write com.apple.ImageCapture disableHotPlug -bool YES
+
+# Allow tap to click for Apple trackpad devices
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# Restarting apps:
+echo 'Restarting apps...'
+killall Finder
+
