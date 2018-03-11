@@ -25,3 +25,4 @@ mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "MindNode 2", id: 992076693
 mas "FocusList", id: 1086877679
+mas "Things 3", id: 904280696
